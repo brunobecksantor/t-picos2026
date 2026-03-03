@@ -1,8 +1,5 @@
 <?php
-$nome = $_POST["nome"];
-$endereco = $_POST["endereco"];
-$idade = $_POST["idade"];
-$sexo = $_POST["sexo"];
+$nota = $_POST["nota"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,10 +11,13 @@ $sexo = $_POST["sexo"];
 <body>
     <div class="form">
         <?php 
-        if($idade < 18) {
-            echo"seu nome é $nome você é Menor de idade";
+        if($nota < 1.7) {
+            echo"sem exame";
+        } elseif ($nota >=7) {
+            echo"passou";
         } else{
-            echo"Seu nome é $nome você mora no endereço $endereco, você tem $idade anos e você é do genêro $sexo";
+            $nota = (50-(6*$nota))/4;
+            echo"você precisa tirar $nota";
         }
         ?>
     </div>

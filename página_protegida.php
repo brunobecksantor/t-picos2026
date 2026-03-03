@@ -12,7 +12,7 @@ $senha = $_POST["senha"];
 <body>
     <div class="form">
         <?php 
-        if($senha == "pao de queijo" and $nome == "Admin") {
+        if($senha == "pao de queijo" and $nome == "Tony") {
             echo"Boas vindas administrador $nome";
         } else{
             echo"ERRO nome ou senha incorretos <br> Chamando a polícia!";
@@ -36,6 +36,10 @@ $senha = $_POST["senha"];
     border-radius: 5%;
     font-size:25px;
     text-align:center;
+    font-family: sans-serif;
+}
+body{
+    background-color: lightblue;
 }
 </style>
 </html>
