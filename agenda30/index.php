@@ -25,7 +25,7 @@
 
     if (mysqli_num_rows($resultado) > 0){
         while ($linha = mysqli_fetch_assoc($resultado)){
-            echo $linha['nome']  ." | ". $linha['endereco'] ." | ". $linha['telefone'] . "<br>";
+            echo $linha['nome']  ." | ". $linha['endereco'] ." | ". $linha['telefone'] . " | <a href='editar.php?id=".$linha['id']."'>Editar</a> | <a href='excluir.php?id='>Excluir</a>" . "<br>";
         }
     } else{
         echo"<h3>Nenhum contato registrado.</h3>";
