@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+            window.onload = function() {
+                function mudarcor1(cor){
+                    document.body.style.backgroundColor = cor;
+                }
+    
+                let temperatura = Number(prompt("o quão quente ou frio está?"));
+                if ((temperatura >= 26) && (temperatura <= 50)) {
+                    alert("Está calor");
+                    mudarcor1('lightcoral');
+                    document.getElementById('texto').innerHTML = 'está calor';
+                    document.getElementById('temp').innerHTML = temperatura + " graus";
+                } else if ((temperatura >= 16) && (temperatura <= 25)) {
+                    alert("Está agradável");
+                    mudarcor1('lightgreen');
+                    document.getElementById('texto').innerHTML = 'está agradável';
+                    document.getElementById('temp').innerHTML = temperatura + " graus";
+                } else if ((temperatura >= -5) && (temperatura <= 15)) {
+                    alert("Está frio");
+                    mudarcor1('lightblue');
+                    document.getElementById('texto').innerHTML = 'está frio';
+                    document.getElementById('temp').innerHTML = temperatura + " graus";
+                } else if (temperatura < -5) {
+                    alert("você morreu kkkkkkkk");
+                    mudarcor1('lightcyan');
+                    document.getElementById('texto').innerHTML = 'você morreu kkkkkkkk';
+                    document.getElementById('temp').innerHTML = temperatura + " graus";
+                } else if (temperatura > 50){
+                    alert("você morreu kkkkkkkk");
+                    mudarcor1('red')
+                    document.getElementById('texto').innerHTML = 'você morreu kkkkkkkk';
+                    document.getElementById('temp').innerHTML = temperatura + " graus";
+                }
+            };
+        </script>
+        <h1 id="texto" style="position:absolute; top:30%; left:50%; transform:translate(-50%, -50%); font-size: 90px;" >ababa</h1> <br>
+        <h1 id="temp" style="position:absolute; top:40%; left:50%; transform:translate(-50%, -50%); font-size: 90px;" >ababa</h1>
+</body>
+</html>
